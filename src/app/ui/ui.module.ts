@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
 import { FooterComponentComponent } from './components/footer-component/footer-component.component';
 import { NavComponentComponent } from './components/nav-component/nav-component.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,6 +16,7 @@ import { NavComponentComponent } from './components/nav-component/nav-component.
   imports: [
     CommonModule,
     CoderbaseUiModule,
+    RouterModule
   ]
 })
 export class UiModule { }
