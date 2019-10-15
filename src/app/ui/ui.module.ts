@@ -18,3 +18,10 @@ import { NavComponentComponent } from './components/nav-component/nav-component.
   ]
 })
 export class UiModule { }
+
+
+// LoginModule (Chargé au start de lapp)
+// SharedModule (lazy loading)
+// PageNotFoundModule (lazy loading)
+// PresationsModule (lazy loading)
+// ClientsModule (lazy loading)
