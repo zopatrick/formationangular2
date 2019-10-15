@@ -3,8 +3,11 @@ Todo:
   ✔ Install libraries @started(19-10-14 14:57) @done(19-10-15 09:55) @lasted(18h58m54s)
   ☐ first commit git
   ☐ scss encapsulation emulated
-  scss variables
-  poids de selecteurs
-  
+  ✔ scss variables @done(19-10-15 10:45)
+  ✔ poids de selecteurs @done(19-10-15 12:00)
+  ✔ bonnes pratiques scss @done(19-10-15 12:00)
+  ✔ life cycles @done(19-10-15 12:00)
+
+
 
 

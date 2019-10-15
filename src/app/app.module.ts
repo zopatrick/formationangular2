@@ -4,11 +4,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
 import { LoginModule } from './login/login.module';
+import { PrestationsComponent } from './prestations/page/prestations/prestations.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrestationsComponent
   ],
   imports: [
     BrowserModule,
