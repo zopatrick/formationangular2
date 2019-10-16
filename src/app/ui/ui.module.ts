@@ -8,8 +8,6 @@ import { FooterComponentComponent } from './components/footer-component/footer-c
 import { NavComponentComponent } from './components/nav-component/nav-component.component';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [UiComponent, HeaderComponentComponent, FooterComponentComponent, NavComponentComponent],
   exports: [UiComponent],
