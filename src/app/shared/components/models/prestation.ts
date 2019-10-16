@@ -1,14 +1,14 @@
 import { PrestationI } from '../../interfaces/prestation-i';
 import { State } from '../enums/state.enum';
 
-export class Prestation implements PrestationI{
+export class Prestation implements PrestationI {
   id: string;
   typePresta: string;
   client: string;
   nbJours = 1;
   tjmHt = 600;
   tauxTva = 20;
-  state: State.OPTION;
+  state = State.OPTION;
   comment: string;
 
   constructor(fields?: Partial<Prestation>) {
@@ -29,6 +29,6 @@ export class Prestation implements PrestationI{
     if (tva  && tva <= 0) {
       return this.totalHt();
     }
-    return this.totalHt() * (1 + tva / 100);
+    return this.totalHt() * (1 + this.tauxTva / 100);
   }
 }
