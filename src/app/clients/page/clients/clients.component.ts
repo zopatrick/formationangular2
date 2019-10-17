@@ -14,6 +14,10 @@ export class ClientsComponent implements OnInit {
     'state',
     'name',
     'email'];
+  public label = 'Ajouter un client';
+  public title = 'Clients';
+  public subTitle = 'Tous les clients';
+
 
   // if < to angular 6
   public states = Object.values(StateClient);

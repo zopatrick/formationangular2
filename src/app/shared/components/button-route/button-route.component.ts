@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button-route',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button-route.component.scss']
 })
 export class ButtonRouteComponent implements OnInit {
-
+  @Input() label: string;
+  @Input() route: string;
+  @Input() href: string;
   constructor() { }
 
   ngOnInit() {

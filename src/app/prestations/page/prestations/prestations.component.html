@@ -1,3 +1,5 @@
+<app-template-a [title]='title' [subTitle]='subTitle'></app-template-a>
+
 <app-tableau-dark [headers]="headers">
      <tr *ngFor="let item of collection">
         <td>{{item.typePresta}}</td>
@@ -18,4 +20,5 @@
             </td>
      </tr>
 </app-tableau-dark>
+<app-button-route [label]="label" route="add">{{label}}</app-button-route>
 

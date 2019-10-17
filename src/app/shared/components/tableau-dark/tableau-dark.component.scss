@@ -15,3 +15,13 @@
     background: $color-success;
   }
 }
+
+app-template-a #tableau-dark thead {
+  background: $dark-color;
+  color:$light-color
+}
+
+app-template-b #tableau-dark thead {
+  background: $color-success;
+  color:$light-color
+}

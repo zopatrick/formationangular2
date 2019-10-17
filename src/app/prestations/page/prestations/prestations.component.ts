@@ -17,6 +17,9 @@ export class PrestationsComponent implements OnInit {
   'Total H',
   'Total TTC',
   'State'];
+  public label = 'Ajouter une prestation';
+  public title = 'Prestations';
+  public subTitle = 'Toutes les prestations';
 
   // if < to angular 6
   public states = Object.values(State);
