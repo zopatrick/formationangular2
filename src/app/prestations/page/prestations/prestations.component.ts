@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PrestationsService } from '../../services/prestations.service';
 import { Prestation } from 'src/app/shared/components/models/prestation';
 import { State } from 'src/app/shared/components/enums/state.enum';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-prestations',
@@ -24,10 +25,16 @@ export class PrestationsComponent implements OnInit {
   // if < to angular 6
   public states = Object.values(State);
   public state: State;
-  constructor(private prestationsService: PrestationsService) {
+  constructor(private prestationsService: PrestationsService,
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
+    this.route.data.subscribe((data) => {
+      console.log('data=', data);
+      this.title = data.title;
+      this.subTitle = data.subTitle;
+    });
     this.collection = this.prestationsService.collection;
     this.fillHeaders();
   }

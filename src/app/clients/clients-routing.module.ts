@@ -4,7 +4,10 @@ import { ClientsComponent } from './page/clients/clients.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: ClientsComponent },
+  {
+    path: '', component: ClientsComponent,
+    data: { title: 'Client', subTitle: 'Tous les clients' }
+  },
 ];
 
 
