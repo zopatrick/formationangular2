@@ -5,10 +5,12 @@
     background: $color2;
   }
 
+  .state-inactif,
   .state-annule {
     background: $color-error;
   }
 
+  .state-actif,
   .state-confirm {
     background: $color-success;
   }

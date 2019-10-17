@@ -13,7 +13,12 @@ export class StateDirective implements OnChanges {
   @Input() appState: any;
   @HostBinding('class') hostElementClass: string;
 
-  constructor() {}
+  constructor() {
+    // console.log(this.appState);
+    if (this.appState) {
+      this.hostElementClass = this.formatClass(this.appState);
+    }
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     // console.log(this.appState);
