@@ -1,0 +1,35 @@
+<app-template-a [title]='title' [subTitle]='subTitle'></app-template-a>
+<form [formGroup]="form" ngSubmit="onSubmit()">
+  <div class="form-group">
+    <label for="typePresta">typePresta</label>
+    <input type="text" class="form-control" id="typePresta" formControlName="typePresta">
+  </div>
+  <div class="form-group">
+    <label for="client">client</label>
+    <input type="text" class="form-control" id="client" formControlName="client">
+  </div>
+  <div class="form-group">
+    <label for="nbJours">nbJours</label>
+    <input type="number" class="form-control" id="nbJours" formControlName="nbJours">
+  </div>
+  <div class="form-group">
+    <label for="tjmHT">tjmHT</label>
+    <input type="number" class="form-control" id="tjmHT" formControlName="tjmHt">
+  </div>
+  <div class="form-group">
+    <label for="tauxTva">tauxTva</label>
+    <input type="number" class="form-control" id="tauxTva" formControlName="tauxTva">
+  </div>
+  <div class="form-group">
+    <label for="state">state</label>
+    <select class="form-control" id="state" formControlName="state">
+      <option *ngFor="let state of states | keyvalue" [ngValue]="state.value">{{ state.value}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="comment">comment</label>
+    <textarea type="number" class="form-control" id="comment" formControlName="comment"></textarea>
+  </div>
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
