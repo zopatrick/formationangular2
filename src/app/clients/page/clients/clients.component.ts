@@ -37,7 +37,7 @@ export class ClientsComponent implements OnInit {
     this.collection = this.clientsService.collection;
   }
 
-   private changeState(p: Client, event) {
+   public changeState(p: Client, event) {
     console.log(event.target.value);
     this.clientsService.update(p, event.target.value);
   }
