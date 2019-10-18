@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { State } from 'src/app/shared/components/enums/state.enum';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Prestation } from 'src/app/shared/components/models/prestation';
@@ -13,6 +13,8 @@ export class FormPrestationComponent implements OnInit {
   public states = State;
   public form: FormGroup;
   public initForm = new Prestation();
+  /* Transmettre un object de l'enfant vers le parent */
+  @Output() submited: EventEmitter<any> = new EventEmitter();
   public title = '';
   public subTitle = '';
   constructor(private fb: FormBuilder, private route: ActivatedRoute) { }
@@ -29,10 +31,8 @@ export class FormPrestationComponent implements OnInit {
   private createForm() {
     this.form = this.fb.group(
       {
-        typePresta: [this.initForm.typePresta,
-          Validators.required],
-        client: [this.initForm.client,
-         Validators.compose([Validators.required, Validators.minLength(2)])],
+        typePresta: [this.initForm.typePresta, Validators.required],
+        client: [this.initForm.client, Validators.compose([Validators.required, Validators.minLength(2)])],
         nbJours: [this.initForm.nbJours],
         tjmHt: [this.initForm.tjmHt],
         tauxTva: [this.initForm.tauxTva],
@@ -42,8 +42,7 @@ export class FormPrestationComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log(this.form.value);
+    console.log('FormPrestationComponent = ', this.form.value);
+    this.submited.emit(this.form.value);
   }
-
-
 }

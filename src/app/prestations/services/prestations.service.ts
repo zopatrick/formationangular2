@@ -31,6 +31,9 @@ export class PrestationsService {
       console.log('item after', item.state);
   }
 
+  public add(item: any) {
+    this.collection.push(new Prestation(item));
+  }
   // delete item in collection
 
 

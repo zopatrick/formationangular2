@@ -20,6 +20,20 @@ Todo:
   ✔ pipe personnalisé @done(19-10-16 14:28)
 
   ✔ add data in route @done(19-10-17 14:35)
+  ✔ Reactive forms and @output @done(19-10-17 16:18)
+
+  Router.Navigate() to redirect in ts
+  bdd firebase
+  Obeservable, subscribe and AsyncPipe
+  Pipes Rxjs
+  Exemple behaviorSubject and service to communite between
+
+  TP: realiser page
+  ✔ TP: realiser page add-client.component.ts @done(19-10-18 10:08)
+  TP: realiser page edit-prestation.component.ts
+  TP: realiser page edit-client.component.ts
+
+  ✔ Event emitter, router.naviguate @done(19-10-18 10:39)
 
 
 
